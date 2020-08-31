@@ -11,3 +11,4 @@ coverage/
 
 # sidetree-ipfs data folder
 sidetree-ipfs/
+*.pptx

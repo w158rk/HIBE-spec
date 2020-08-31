@@ -4,7 +4,7 @@
   "resource_path": "./www",
   "specs": [
     {
-      "title": "DIF Sidetree Protocol",
+      "title": "HIBE spec",
       "logo": "https://rawcdn.githack.com/decentralized-identity/decentralized-identity.github.io/a3ca39717e440302d1fd99a796e7f00e1c42eb2d/images/logo-flat.svg",
       "logo_link": "https://github.com/w158rk",
       "source": {
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "title": "DIF Sidetree REST API",
+      "title": "HIBE REST API",
       "logo": "https://rawcdn.githack.com/decentralized-identity/decentralized-identity.github.io/a3ca39717e440302d1fd99a796e7f00e1c42eb2d/images/logo-flat.svg",
       "logo_link": "https://identity.foundation",
       "source": {
