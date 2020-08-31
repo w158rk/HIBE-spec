@@ -23,9 +23,10 @@
         "parameters.md",
         "common-functions.md",
         "topology.md",
-        "file-structures.md",
+        "data-structures.md",
         "operations.md",
-        "processing.md"
+        "processing.md",
+        "security.md"
       ]
     },
     {
