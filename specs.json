@@ -5,7 +5,7 @@
   "specs": [
     {
       "title": "HIBE spec",
-      "logo": "image/HIBE-logo.svg",
+      "logo": "/image/HIBE-logo.svg",
       "logo_link": "https://github.com/w158rk",
       "source": {
         "host": "github",
@@ -31,7 +31,7 @@
     },
     {
       "title": "HIBE REST API",
-      "logo": "image/HIBE-logo.svg",
+      "logo": "/image/HIBE-logo.svg",
       "logo_link": "https://github.com/w158rk",
       "source": {
         "host": "github",
