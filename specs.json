@@ -4,9 +4,9 @@
   "resource_path": "./www",
   "specs": [
     {
-      "title": "HIBE spec",
+      "title": "HIBE标准文档",
       "logo": "/image/HIBE-logo.svg",
-      "logo_link": "https://github.com/w158rk",
+      "logo_link": "https://github.com/w158rk/HIBE-spec",
       "source": {
         "host": "github",
         "account": "w158rk",
@@ -32,17 +32,33 @@
     {
       "title": "HIBE REST API",
       "logo": "/image/HIBE-logo.svg",
-      "logo_link": "https://github.com/w158rk",
+      "logo_link": "https://github.com/w158rk/HIBE-spec",
       "source": {
         "host": "github",
-        "account": "decentralized-identity",
-        "repo": "sidetree"
+        "account": "w158rk",
+        "repo": "HIBE-spec"
       },
       "output_path": "./www/api",
       "spec_directory": "./docs/api",
       "markdown_paths": [
         "title.md",
         "content.md"
+      ]
+    },
+    {
+      "title": "HIBE应用实例",
+      "logo": "/image/HIBE-logo.svg",
+      "logo_link": "https://github.com/w158rk/HIBE-spec",
+      "source": {
+        "host": "github",
+        "account": "w158rk",
+        "repo": "HIBE-spec"
+      },
+      "output_path": "./www/cases",
+      "spec_directory": "./docs/cases",
+      "markdown_paths": [
+        "title.md",
+        "init.md"
       ]
     }
   ]

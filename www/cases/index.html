@@ -1,0 +1,264 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+            <title>HIBE应用实例</title>
+            <link href="../spec-up/css/custom-elements.css" rel="stylesheet">
+            <link href="../spec-up/css/prism.css" rel="stylesheet">
+            <link href="../spec-up/css/chart.css" rel="stylesheet">
+            <link href="../spec-up/css/font-awesome.css" rel="stylesheet">
+            <link href="../spec-up/css/index.css" rel="stylesheet">
+            <script src="../spec-up/js/custom-elements.js"></script>
+          </head>
+          <body features="source logo">
+            
+            <svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="github" viewBox="0 0 20 20">
+    <path d="M10 0.247c-5.522 0-10 4.477-10 10 0 4.418 2.865 8.167 6.839 9.489 0.5 0.093 0.683-0.217 0.683-0.481 0-0.238-0.009-1.026-0.014-1.862-2.782 0.605-3.369-1.18-3.369-1.18-0.455-1.156-1.11-1.463-1.11-1.463-0.907-0.621 0.069-0.608 0.069-0.608 1.004 0.071 1.533 1.031 1.533 1.031 0.892 1.529 2.339 1.087 2.91 0.831 0.090-0.646 0.349-1.087 0.635-1.337-2.221-0.253-4.556-1.11-4.556-4.942 0-1.092 0.391-1.984 1.030-2.684-0.104-0.252-0.446-1.269 0.097-2.646 0 0 0.84-0.269 2.751 1.025 0.798-0.222 1.653-0.333 2.503-0.337 0.85 0.004 1.706 0.115 2.505 0.337 1.909-1.294 2.747-1.025 2.747-1.025 0.544 1.378 0.202 2.395 0.098 2.646 0.641 0.7 1.029 1.592 1.029 2.684 0 3.841-2.339 4.687-4.566 4.934 0.359 0.31 0.678 0.919 0.678 1.852 0 1.338-0.012 2.415-0.012 2.744 0 0.266 0.18 0.578 0.687 0.48 3.971-1.324 6.833-5.071 6.833-9.488 0-5.523-4.477-10-10-10z"></path>
+  </symbol>
+  <symbol id="nested_list" viewBox="0 0 37 32">
+    <path d="M0 2.286c0-1.262 1.023-2.286 2.286-2.286s2.286 1.023 2.286 2.286c0 1.262-1.023 2.286-2.286 2.286s-2.286-1.023-2.286-2.286zM9.143 0h27.429v4.571h-27.429zM9.143 11.429c0-1.262 1.023-2.286 2.286-2.286s2.286 1.023 2.286 2.286c0 1.262-1.023 2.286-2.286 2.286s-2.286-1.023-2.286-2.286zM18.286 9.143h18.286v4.571h-18.286zM9.143 29.714c0-1.262 1.023-2.286 2.286-2.286s2.286 1.023 2.286 2.286c0 1.262-1.023 2.286-2.286 2.286s-2.286-1.023-2.286-2.286zM18.286 27.429h18.286v4.571h-18.286zM18.286 20.571c0-1.262 1.023-2.286 2.286-2.286s2.286 1.023 2.286 2.286c0 1.262-1.023 2.286-2.286 2.286s-2.286-1.023-2.286-2.286zM27.429 18.286h9.143v4.571h-9.143z"></path>
+  </symbol>
+</svg>
+
+            <main>
+
+              <header id="header" class="panel-header">
+                <span id="toc_toggle" panel-toggle="toc">
+                  <svg icon><use xlink:href="#nested_list"></use></svg>
+                </span>
+                <a id="logo" href="https://github.com/w158rk/HIBE-spec">
+                  <img src="/image/HIBE-logo.svg" />
+                </a>
+                <span issue-count animate panel-toggle="repo_issues">
+                  <svg icon><use xlink:href="#github"></use></svg>
+                </span>
+              </header>
+
+              <article id="content">
+                <h1 id="hibe应用实例"><a class="toc-anchor" href="#hibe应用实例">§</a> HIBE应用实例</h1>
+<p><strong>标准状态:</strong> 草稿</p>
+<p><strong>最新发布版本:</strong>
+<a href="http://207.148.104.180/cases">HIBE cases</a></p>
+<dl>
+<dt><strong>创作者:</strong></dt>
+<dd><a href="https://www.linkedin.com/in/ruikai-wang/">Wang</a> (USTC)</dd>
+</dl>
+<!-- ~ [Henry Tsai](https://www.linkedin.com/in/henry-tsai-6b884014/) (Microsoft) -->
+<dl>
+<dt><strong>参与编辑:</strong></dt>
+<dd><a href="https://github.com/w158rk/HIBE-spec">GitHub repo</a></dd>
+<dt><strong>HIBE REST API:</strong></dt>
+<dd><a href="http://207.148.104.180/spec">HIBE spec</a></dd>
+<dd><a href="http://207.148.104.180/api">REST API</a></dd>
+</dl>
+<hr>
+<h2 id="系统初始化"><a class="toc-anchor" href="#系统初始化">§</a> 系统初始化</h2>
+<ul>
+<li>功能：多个节点使用秘密共享协商系统主私钥并分配相关函数。</li>
+</ul>
+<h3 id="节点文件结构"><a class="toc-anchor" href="#节点文件结构">§</a> 节点文件结构</h3>
+<pre class="language-shell"><code class="language-shell">    *
+    <span class="token operator">|</span>
+    +--- init_server.json <span class="token comment"># 节点配置文件</span>
+    <span class="token operator">|</span>
+    +--- top_user_list.json <span class="token comment"># 顶级用户列表</span>
+    <span class="token operator">|</span>
+    +--- python <span class="token comment">#指向/src/python的软链接</span>
+</code></pre>
+<h3 id="init_serverjson实例"><a class="toc-anchor" href="#init_serverjson实例">§</a> <code>init_server.json</code>实例</h3>
+<p><strong><strong>certificate_file现在变成啥</strong></strong></p>
+<pre class="language-json"><code class="language-json">    <span class="token punctuation">{</span>
+        <span class="token property">"log"</span> <span class="token operator">:</span> <span class="token string">"server.log"</span><span class="token punctuation">,</span>
+        <span class="token property">"top_user_list"</span><span class="token operator">:</span> <span class="token string">"./top_user_list.json"</span><span class="token punctuation">,</span>
+
+        <span class="token property">"global_mpk_file"</span> <span class="token operator">:</span> <span class="token string">"mpk-global.conf"</span><span class="token punctuation">,</span>
+        <span class="token property">"global_sk_file"</span> <span class="token operator">:</span> <span class="token string">"sk-global.conf"</span><span class="token punctuation">,</span>
+        <span class="token property">"admin_mpk_file"</span> <span class="token operator">:</span> <span class="token string">"mpk-admin.conf"</span><span class="token punctuation">,</span>
+        <span class="token property">"admin_msk_file"</span> <span class="token operator">:</span> <span class="token string">"msk-admin.conf"</span><span class="token punctuation">,</span>
+        <span class="token property">"admin_sk_file"</span> <span class="token operator">:</span> <span class="token string">"sk-admin.conf"</span><span class="token punctuation">,</span>
+        <span class="token property">"local_certificate_file"</span><span class="token operator">:</span> <span class="token string">"local-certificate.conf"</span><span class="token punctuation">,</span>
+        <span class="token property">"admin_certificate_file"</span><span class="token operator">:</span> <span class="token string">"admin-certificate.conf"</span><span class="token punctuation">,</span>
+
+        <span class="token property">"id"</span> <span class="token operator">:</span> <span class="token string">"Server1"</span><span class="token punctuation">,</span> 
+        <span class="token property">"addr"</span> <span class="token operator">:</span> <span class="token string">"127.0.0.1"</span><span class="token punctuation">,</span>
+        <span class="token property">"port"</span> <span class="token operator">:</span> <span class="token number">5003</span><span class="token punctuation">,</span>
+        <span class="token property">"parent"</span> <span class="token operator">:</span> <span class="token null keyword">null</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>参数描述如下</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>log</td>
+<td>log输出文件位置</td>
+<td><strong><strong>当前log系统还未完善</strong></strong></td>
+</tr>
+<tr>
+<td>top_user_list</td>
+<td>顶级节点列表位置</td>
+<td></td>
+</tr>
+<tr>
+<td>global_mpk_file</td>
+<td>顶级域参数文件</td>
+<td></td>
+</tr>
+<tr>
+<td>global_sk_file</td>
+<td>顶级域私钥文件</td>
+<td></td>
+</tr>
+<tr>
+<td>admin_mpk_file</td>
+<td>节点自身网络域参数文件</td>
+<td></td>
+</tr>
+<tr>
+<td>admin_msk_file</td>
+<td>节点自身主私钥文件</td>
+<td></td>
+</tr>
+<tr>
+<td>admin_sk_file</td>
+<td>节点自身网络域与节点相应的私钥文件</td>
+<td></td>
+</tr>
+<tr>
+<td>local_certificate_file</td>
+<td>节点自身网络域终端证书（证书链结尾）</td>
+<td></td>
+</tr>
+<tr>
+<td>admin_certificate_file</td>
+<td>节点自身网络域中间证书（证书链非结尾）</td>
+<td></td>
+</tr>
+<tr>
+<td>id</td>
+<td>用户标识</td>
+<td></td>
+</tr>
+<tr>
+<td>addr</td>
+<td>用户IP地址</td>
+<td></td>
+</tr>
+<tr>
+<td>port</td>
+<td>用户端口号</td>
+<td></td>
+</tr>
+<tr>
+<td>parent</td>
+<td>用户父节点</td>
+<td>顶级节点没有父节点</td>
+</tr>
+</tbody>
+</table>
+<h3 id="top_user_list实例"><a class="toc-anchor" href="#top_user_list实例">§</a> <code>top_user_list</code>实例</h3>
+<pre class="language-json"><code class="language-json">    <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"id"</span> <span class="token operator">:</span> <span class="token string">"Server1"</span><span class="token punctuation">,</span> 
+            <span class="token property">"addr"</span> <span class="token operator">:</span> <span class="token string">"127.0.0.1"</span><span class="token punctuation">,</span>
+            <span class="token property">"port"</span> <span class="token operator">:</span> <span class="token number">5003</span><span class="token punctuation">,</span>
+            <span class="token property">"parent"</span> <span class="token operator">:</span> <span class="token null keyword">null</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"id"</span> <span class="token operator">:</span> <span class="token string">"Server2"</span><span class="token punctuation">,</span> 
+            <span class="token property">"addr"</span> <span class="token operator">:</span> <span class="token string">"127.0.0.1"</span><span class="token punctuation">,</span>
+            <span class="token property">"port"</span> <span class="token operator">:</span> <span class="token number">5004</span><span class="token punctuation">,</span>
+            <span class="token property">"parent"</span> <span class="token operator">:</span> <span class="token null keyword">null</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"id"</span> <span class="token operator">:</span> <span class="token string">"Server3"</span><span class="token punctuation">,</span> 
+            <span class="token property">"addr"</span> <span class="token operator">:</span> <span class="token string">"127.0.0.1"</span><span class="token punctuation">,</span>
+            <span class="token property">"port"</span> <span class="token operator">:</span> <span class="token number">5005</span><span class="token punctuation">,</span>
+            <span class="token property">"parent"</span> <span class="token operator">:</span> <span class="token null keyword">null</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+</code></pre>
+<ul>
+<li>所有的节点parent域必须为null</li>
+<li>节点之间地址和端口不冲突，ID互不相同</li>
+</ul>
+<h3 id="运行方式"><a class="toc-anchor" href="#运行方式">§</a> 运行方式</h3>
+<ol>
+<li>假设有N个顶级节点，需要其中N-1个节点运行如下指令</li>
+</ol>
+<pre class="language-shell"><code class="language-shell">    python3 python/server.py -c init_server.json
+</code></pre>
+<ol start="2">
+<li>最后一个节点，在确认其余节点都已运行<code>server.py</code>服务之后运行如下指令</li>
+</ol>
+<pre class="language-shell"><code class="language-shell">    python3 python/client.py --action init -c init_server.json 
+</code></pre>
+<h3 id="运行结果"><a class="toc-anchor" href="#运行结果">§</a> 运行结果</h3>
+<ol>
+<li>节点输出<code>The initialization has finished</code>消息，初始化结束。</li>
+<li>节点输出一系列配置文件，对应配置文件中指定的相关文件名，未在配置文件中指定的文件名可忽略，会于后续版本中逐渐消除。</li>
+</ol>
+<h2 id="私钥请求"><a class="toc-anchor" href="#私钥请求">§</a> 私钥请求</h2>
+<h2 id="会话密钥协商"><a class="toc-anchor" href="#会话密钥协商">§</a> 会话密钥协商</h2>
+
+              </article>    
+
+            </main>
+
+            <slide-panels id="slidepanels">
+              <slide-panel id="repo_issues" options="right">
+                <header class="panel-header">
+                  <span>
+                    <svg icon><use xlink:href="#github"></use></svg>
+                    <span issue-count></span>
+                  </span>
+                  <span class="repo-issue-toggle" panel-toggle="repo_issues">✕</span>
+                </header>
+                <ul id="repo_issue_list"></ul>
+              </slide-panel>
+
+              <slide-panel id="toc">
+                <header class="panel-header">
+                  <span>Table of Contents</span>
+                  <span panel-toggle="toc">✕</span>
+                </header>
+                <div id="toc_list">
+                  <ul class="toc">
+<li><a href="#%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96">系统初始化</a>
+<ul>
+<li><a href="#%E8%8A%82%E7%82%B9%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84">节点文件结构</a></li>
+<li><a href="#init_serverjson%E5%AE%9E%E4%BE%8B"><code>init_server.json</code>实例</a></li>
+<li><a href="#top_user_list%E5%AE%9E%E4%BE%8B"><code>top_user_list</code>实例</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E6%96%B9%E5%BC%8F">运行方式</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C">运行结果</a></li>
+</ul>
+</li>
+<li><a href="#%E7%A7%81%E9%92%A5%E8%AF%B7%E6%B1%82">私钥请求</a></li>
+<li><a href="#%E4%BC%9A%E8%AF%9D%E5%AF%86%E9%92%A5%E5%8D%8F%E5%95%86">会话密钥协商</a></li>
+</ul>
+
+                </div>
+              </slide-panel>
+              
+            </slide-panels>
+
+          </body>
+          <script>window.specConfig = {"title":"HIBE应用实例","logo":"/image/HIBE-logo.svg","logo_link":"https://github.com/w158rk/HIBE-spec","source":{"host":"github","account":"w158rk","repo":"HIBE-spec"},"output_path":"./www/cases","spec_directory":"./docs/cases/","markdown_paths":["title.md","init.md"],"destination":"./www/cases/","rootResourcePrefix":"./www/","destinationResourcePrefix":"../"}</script>
+          <script src="../spec-up/js/markdown-it.js"></script>
+          <script src="../spec-up/js/prism.js" data-manual></script>
+          <script src="../spec-up/js/mermaid.js"></script>
+          <script src="../spec-up/js/chart.js"></script>
+          <script src="../spec-up/js/index.js"></script>
+        </html>
+      
