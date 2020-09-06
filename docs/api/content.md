@@ -64,10 +64,6 @@ python3 python/restAPI.py –c client.json
 
 #### 私钥生成 `/sk`
 
-****<未实现>****
-
-如果`user.local_sk`存在，返回base64编码后的私钥内容，否则，返回空。
-
 ```json
 {
   "msk": "MIIBDQYKKoEcz1UBgi4GAQYJKoEcz1UBgi4DBgoqgRzPVQGCLgQBBEEEArxw6TXGybvmD_KG6Bas8UDgslLWp0U-LjZ5N-NO51VqdN-5vU_2DeyZuO8uCfDvR49KMjfM01l1lIO2007YeQSBgQQ7KqYGzK49qn9nM_lA_mt1OQICkpjJ2FP265H6MeQoi1OGE2nh2EFyirVPmx0qz1jt-WAVReSQIW6dHcU5_n-FrA3ZB_KmiDMMHift1-3YDukyVy9qePg-jiPW3qgRlSMEWFNI7wAEu_-OkbmcQc-g1o3E74WOCRota1bhjFE3cwIhAIbcnYyhVJWWp3U23o0SSXLJs-aAQJ8aVBGeY3FYWAMp",
