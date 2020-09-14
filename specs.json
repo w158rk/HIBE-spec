@@ -42,7 +42,8 @@
       "spec_directory": "./docs/api",
       "markdown_paths": [
         "title.md",
-        "content.md"
+        "content.md",
+        "tcp.md"
       ]
     }
   ]

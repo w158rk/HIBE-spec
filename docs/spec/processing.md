@@ -10,9 +10,59 @@
 2. 密钥生成中心检查ID的合法性（规则由密钥生成中心制定，如ID不可重复等），若同意私钥生成请求，则使用该生成中心的系统参数和待加入节点的标识生成私钥，使用临时密钥加密后发送给待加入节点，并将待加入节点标识和私钥恢复秘密添加到标识库。
 3. 待加入节点发送Finish消息到密钥生成中心，节点加入过程结束。
 
+#### PrivateKeyRequest 
+
+| 域 | 值 |
+| --- | --- |
+| user_id | 用户标识 |
+| type | SK_REQUEST |
+| key | 临时密钥 |
+| secret | 私钥恢复秘密 |
+
+#### PrivateKeyRespond 
+
+| 域 | 值 |
+| --- | --- |
+| type | SK_RESPOND |
+| user_id | 用户标识 |
+| server_id | 服务器标识 |
+| private_key | 私钥 |
+
 ### 节点退出/私钥撤销 
 
 ### 网络域生成 
+
+<img src="../image/domain-request.png" style="display: block; margin: 0 auto; padding: 1em 0; width: 100%; max-width: 600px;" />
+
+#### DomainRequest 
+
+| 域 | 值 |
+| --- | --- |
+| type | DOMAIN_REQUEST |
+| user_id | 发起用户标识 |
+| mpk | 发起用户系统参数 |
+
+#### DomainSubmit 
+
+| 域 | 值 |
+| --- | --- |
+| type | DOMAIN_SUBMIT |
+| user_id | 发起用户标识 |
+| mpk | 发起用户系统参数 |
+
+#### DomainCommit 
+
+| 域 | 值 |
+| --- | --- |
+| type | DOMAIN_COMMIT |
+| user_id | 发起用户标识 |
+| mpk | 发起用户系统参数 |
+
+#### DomainFinish
+| 域 | 值 |
+| --- | --- |
+| type | DOMAIN_FINISH |
+
 
 ### 网络域参数更新
 
