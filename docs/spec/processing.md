@@ -39,6 +39,10 @@
 
 <img src="../image/domain-request.png" style="display: block; margin: 0 auto; padding: 1em 0; width: 100%; max-width: 600px;" />
 
+1. 发起节点将发起节点标识、发起节点系统参数发送给父节点，发起节点使用local私钥对消息进行签名。
+2. 父节点检查发起节点签名的合法性，若同意发起节点的网络域生成请求，父节点将发起节点标识和发起节点的系统参数进行格式化，使用admin私钥对网络包进行签名，将格式化后的信息和签名上传到区块链。
+3. 父节点向发起节点发送网络域生成结束消息。
+
 #### DomainRequest 
 
 | 域 | 值 |
@@ -52,14 +56,6 @@
 | 域 | 值 |
 | --- | --- |
 | type | DOMAIN_SUBMIT |
-| user_id | 发起用户标识 |
-| mpk | 发起用户系统参数 |
-
-#### DomainCommit 
-
-| 域 | 值 |
-| --- | --- |
-| type | DOMAIN_COMMIT |
 | user_id | 发起用户标识 |
 | mpk | 发起用户系统参数 |
 
