@@ -2,6 +2,7 @@ dist/
 node_modules/
 www/api/index.html
 www/spec/index.html
+www/case/index.html
 www/spec-up/
 nunitresults.xml
 
@@ -12,3 +13,4 @@ coverage/
 # sidetree-ipfs data folder
 sidetree-ipfs/
 *.pptx
+package-lock.json
