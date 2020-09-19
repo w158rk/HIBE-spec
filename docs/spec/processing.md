@@ -20,6 +20,7 @@
 | secret | 私钥恢复秘密 |
 
 服务器端在收到SK_REQUEST_SEC(私钥请求)类型的数据包后执行以下流程：
+
     1、获取密文cipher后，执行ibe_decrypt（mode="admin", c=cipher）操作，对密文进行解密，得到client_id,sm4_key,secret。
 
     2、执行bytes2str(client_id)，bytes2str(secret)操作，将client_id,secret转换为字符串类型。
@@ -35,7 +36,7 @@
     7、将包转换为字节类型并且执行sm4_enc(key=sm4_key, m=plain_text)操作，对明文进行加密。
 
     8、执行make_sk_respond_key_sec(cipher=cipher)操作，将密文构建为一个包。
-    
+
     9、向客户端发送密文包。
     
 #### PrivateKeyRespond 
