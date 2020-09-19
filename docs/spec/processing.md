@@ -14,7 +14,7 @@
 
 | 域 | 值 |
 | --- | --- |
-| client_id | 用户标识 |
+| client_id | 客户端标识 |
 | type | SK_REQUEST |
 | key | 临时密钥 |
 | secret | 私钥恢复秘密 |
@@ -31,7 +31,7 @@
 
 5. 执行ibe_extract（mode="admin", c_id=client_id）操作，根据client_id为用户分配私钥。
 
-6. 执行make_sk_respond_key_plain(client_sk, client_id, server.id)操作，将客户端私钥、客户端标识、服务器端标识构建为一个包。
+6. 执行make_sk_respond_key_plain(client_sk, client_id, server_id)操作，将客户端私钥、客户端标识、服务器端标识构建为一个包。
 
 7. 将包转换为字节类型并且执行sm4_enc(key=sm4_key, m=plain_text)操作，对明文进行加密。
 
@@ -44,11 +44,17 @@
 | 域 | 值 |
 | --- | --- |
 | type | SK_RESPOND |
-| client_id | 用户标识 |
+| client_id | 客户端标识 |
 | server_id | 服务器标识 |
 | private_key | 私钥 |
 
-客户端在收到SK_RESPOND_SEC(私钥响应)类型的数据包后执行以下
+客户端在收到SK_RESPOND_SEC(私钥响应)类型的数据包后执行以下流程：
+
+1. 获取密文cipher = packet.vals[0]。
+
+2. 执行m = user.sm4_dec(user.sm4_key， c=cipher)操作，使用临时密钥对密文进行解密得到明文m。
+
+3. 从明文m中获取private_key。
 
 ### 节点退出/私钥撤销 
 
